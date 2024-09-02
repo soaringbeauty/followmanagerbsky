@@ -1,15 +1,14 @@
-# followmanagerbsky
+# follow manager bsky
 
 automatização de unfollows e follows no bsky pq eu não aguento mais gastar tempo com isso manualmente :)
 
-🛠️ ferramentas utilizadas:
-<br />
+# 🛠️ ferramentas utilizadas:
 Python 3.11.5
 <br />
 Selenium 4.24.0 (Official Python bindings for Selenium WebDriver)
 <br />
 Microsoft Edge WebDriver 128.0.2739.54
-<br />
+
 ---------------------
 
 # passo a passo
