@@ -1,4 +1,5 @@
 # bsky_unfollow_script.py by luizatheworld
+# v2: the renata update
 
 from selenium import webdriver
 from selenium.webdriver.edge.service import Service
@@ -102,14 +103,14 @@ def check_and_unfollow():
 
                         # Encontre o botão "Unfollow" e clique
                         try:
-                            unfollow_button = profile.find_element(By.XPATH, ".//button/div[contains(text(), 'Unfollow')]")
+                            unfollow_button = profile.find_element(By.XPATH, ".//button[contains(., 'Unfollow')]")
                             if unfollow_button:
                                 unfollow_button.click()
                                 unfollow_count += 1
                                 print(f"Unfollow realizado em {username}")
                                 time.sleep(1)  # Aguarde um pouco após o clique
-                        except:
-                            print(f"Erro ao tentar clicar em Unfollow para {username}")
+                        except Exception as e:
+                            print(f"Erro ao tentar clicar em Unfollow para {username}: {str(e)}")
                             pass  # Se o botão "Unfollow" não for encontrado, continue
 
         # Verifique se a página foi rolada até o fim
